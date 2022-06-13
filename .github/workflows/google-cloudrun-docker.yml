@@ -50,7 +50,7 @@ on:
       - "main"
 
 env:
-  PROJECT_ID: opplus-cloud-352011 # TODO: update Google Cloud project id
+  PROJECT_ID: openmarket-350110 # TODO: update Google Cloud project id
   GAR_LOCATION: europe-southwest1 # TODO: update Artifact Registry location
   SERVICE: srv-hello # TODO: update Cloud Run service name
   REGION: europe-southwest1 # TODO: update Cloud Run service region

@@ -1,26 +1,24 @@
 steps:
   # Step 1: Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/opplus-cloud-352011/cloudrun', '.']
+    args: ['build', '-t', 'europe-southwest1-docker.pkg.dev/openmarket-350110/cloudhello', '.']
 
   # Step 2: Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/opplus-cloud-352011/cloudrun']
+    args: ['push', 'europe-southwest1-docker.pkg.dev/openmarket-350110/cloudhello']
 
   # Step 3: Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
       - 'deploy'
-      - 'cloudrun'
+      - 'cloudhello'
       - '--image'
-      - 'gcr.io/opplus-cloud-352011/cloudrun'
+      - 'europe-southwest1-docker.pkg.dev/openmarket-350110/cloudhello'
       - '--region'
       - 'europe-southwest1'
       - '--platform'
       - 'managed'
-      - '--allow-unauthenticated'
-      - '--memory'
-      - '1Gi'
+      - '--allow-unauthenticated'      
 images:
-  - 'gcr.io/$PROJECT_ID/cloudrun'
+  - 'europe-southwest1-docker.pkg.dev/openmarket-350110/cloudhello'
