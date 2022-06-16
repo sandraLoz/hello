@@ -15,4 +15,4 @@ FROM adoptopenjdk/openjdk13:alpine-slim
 COPY --from=builder /app/target/hello-*.jar /cloudhello.jar
 
 # Run the web service on container startup.
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dserver.port=${PORT}","-jar","/cloudhello.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dserver.port=8080","-jar","/cloudhello.jar"]
