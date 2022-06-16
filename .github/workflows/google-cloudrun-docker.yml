@@ -110,6 +110,7 @@ jobs:
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
+          flags: "--allow-unauthenticated"
           # NOTE: If using a pre-built image, update the image name here
           image: eu.gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
 
