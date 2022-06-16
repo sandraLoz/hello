@@ -51,7 +51,7 @@ on:
 
 env:
   PROJECT_ID: openmarket-353507 # TODO: update Google Cloud project id
-  GAR_LOCATION: europe-southwest1 # TODO: update Artifact Registry location
+  GAR_LOCATION: gcr.io # TODO: update Artifact Registry location
   SERVICE: srv-hello # TODO: update Cloud Run service name
   REGION: europe-southwest1 # TODO: update Cloud Run service region
 
